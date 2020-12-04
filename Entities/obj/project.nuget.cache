@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qSQdSosxO6x4l0FtvDz3HQ4+0a9dTOEm3MWYMRqg40dYY2sz8j9TxQyCA/tZ+yRq38KqNv6w/0pE/S2DRAGgQQ==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\Usuario\\Proyectos\\facturacionBack\\Facturacion\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

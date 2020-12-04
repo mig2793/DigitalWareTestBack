@@ -1,0 +1,14 @@
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\Repository.deps.json
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\Repository.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\Repository.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\EntityFramework.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\EntityFramework.SqlServer.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\EntityFramework.xml
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\bin\Debug\netstandard2.0\EntityFramework.SqlServer.xml
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfoInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfo.cs
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.csproj.CoreCompileInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.csproj.CopyComplete
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Repository\obj\Debug\netstandard2.0\Repository.pdb

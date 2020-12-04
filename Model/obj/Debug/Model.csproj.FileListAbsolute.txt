@@ -1,0 +1,14 @@
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\Model.dll.config
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\Model.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\Model.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\Entities.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\EntityFramework.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\Entities.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\EntityFramework.xml
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\obj\Debug\Model.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Model\obj\Debug\Model.pdb

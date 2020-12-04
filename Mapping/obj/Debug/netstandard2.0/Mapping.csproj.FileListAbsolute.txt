@@ -1,0 +1,12 @@
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\bin\Debug\netstandard2.0\Mapping.deps.json
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\bin\Debug\netstandard2.0\Mapping.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\bin\Debug\netstandard2.0\Mapping.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\bin\Debug\netstandard2.0\Entities.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\bin\Debug\netstandard2.0\Entities.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.csprojAssemblyReference.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.AssemblyInfoInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.AssemblyInfo.cs
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.csproj.CoreCompileInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.csproj.CopyComplete
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Mapping\obj\Debug\netstandard2.0\Mapping.pdb

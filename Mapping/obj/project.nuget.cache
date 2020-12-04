@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "3F3S+iJv+2zjaZYtGz2nhiiFi8uSTbgGTUPKYYT64ZST7CHz32z0DKd9+GGZOnHHgpMwcmLgQFXjF9vHmMOvXg==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\Usuario\\Proyectos\\facturacionBack\\Facturacion\\Mapping\\Mapping.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\Miguel Angel\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

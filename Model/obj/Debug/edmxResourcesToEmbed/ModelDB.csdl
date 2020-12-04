@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="facturacionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoria_producto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="productos" Relationship="Self.FK_productos_categoria_producto" FromRole="categoria_producto" ToRole="productos" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="documento" />
+    </Key>
+    <Property Name="documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombres" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="factura" Relationship="Self.FK_factura_usuario" FromRole="clientes" ToRole="factura" />
+  </EntityType>
+  <EntityType Name="detalle_factura">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_factura" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_factura" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="id_producto" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="factura" Relationship="Self.FK_detalle_factura_factura" FromRole="detalle_factura" ToRole="factura" />
+    <NavigationProperty Name="productos" Relationship="Self.FK_detalle_factura_productos" FromRole="detalle_factura" ToRole="productos" />
+  </EntityType>
+  <EntityType Name="factura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_forma_pago" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="clientes" Relationship="Self.FK_factura_usuario" FromRole="factura" ToRole="clientes" />
+    <NavigationProperty Name="detalle_factura" Relationship="Self.FK_detalle_factura_factura" FromRole="factura" ToRole="detalle_factura" />
+    <NavigationProperty Name="forma_pago" Relationship="Self.FK_factura_forma_pago" FromRole="factura" ToRole="forma_pago" />
+    <Property Name="total_factura" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="forma_pago">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sigla" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="factura" Relationship="Self.FK_factura_forma_pago" FromRole="forma_pago" ToRole="factura" />
+  </EntityType>
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="codigo_producto" />
+    </Key>
+    <Property Name="codigo_producto" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="producto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="costo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_categoria_producto" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="categoria_producto" Relationship="Self.FK_productos_categoria_producto" FromRole="productos" ToRole="categoria_producto" />
+    <NavigationProperty Name="detalle_factura" Relationship="Self.FK_detalle_factura_productos" FromRole="productos" ToRole="detalle_factura" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_productos_categoria_producto">
+    <End Role="categoria_producto" Type="Self.categoria_producto" Multiplicity="1" />
+    <End Role="productos" Type="Self.productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria_producto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="productos">
+        <PropertyRef Name="id_categoria_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_factura_usuario">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="1" />
+    <End Role="factura" Type="Self.factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="documento" />
+      </Principal>
+      <Dependent Role="factura">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalle_factura_factura">
+    <End Role="factura" Type="Self.factura" Multiplicity="1" />
+    <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="factura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="detalle_factura">
+        <PropertyRef Name="id_factura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalle_factura_productos">
+    <End Role="productos" Type="Self.productos" Multiplicity="1" />
+    <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="codigo_producto" />
+      </Principal>
+      <Dependent Role="detalle_factura">
+        <PropertyRef Name="id_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_factura_forma_pago">
+    <End Role="forma_pago" Type="Self.forma_pago" Multiplicity="1" />
+    <End Role="factura" Type="Self.factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="forma_pago">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="factura">
+        <PropertyRef Name="id_forma_pago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="facturacion" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categoria_producto" EntityType="Self.categoria_producto" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" />
+    <EntitySet Name="detalle_factura" EntityType="Self.detalle_factura" />
+    <EntitySet Name="factura" EntityType="Self.factura" />
+    <EntitySet Name="forma_pago" EntityType="Self.forma_pago" />
+    <EntitySet Name="productos" EntityType="Self.productos" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_productos_categoria_producto" Association="Self.FK_productos_categoria_producto">
+      <End Role="categoria_producto" EntitySet="categoria_producto" />
+      <End Role="productos" EntitySet="productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_factura_usuario" Association="Self.FK_factura_usuario">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="factura" EntitySet="factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalle_factura_factura" Association="Self.FK_detalle_factura_factura">
+      <End Role="factura" EntitySet="factura" />
+      <End Role="detalle_factura" EntitySet="detalle_factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalle_factura_productos" Association="Self.FK_detalle_factura_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="detalle_factura" EntitySet="detalle_factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_factura_forma_pago" Association="Self.FK_factura_forma_pago">
+      <End Role="forma_pago" EntitySet="forma_pago" />
+      <End Role="factura" EntitySet="factura" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\Entities.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\Entities.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.pdb
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\EntityFramework.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\EntityFramework.SqlServer.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\EntityFramework.xml
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\EntityFramework.SqlServer.xml
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\Users\Usuario\Proyectos\facturacionBack\Facturacion\Entities\bin\Debug\netstandard2.0\System.Security.dll
